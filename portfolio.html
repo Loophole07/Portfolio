@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samip Portfolio</title>
+    <link rel="stylesheet" href="css/portfolio_style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Samip Rawal</h1>
+
+    <hr class="header-line">
+
+    <nav aria-label="Main Navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I’m a passionate Web Developer and a final-year BCA student who enjoys building practical, user-friendly web applications.
+            I’ve worked on PHP-based projects and completed a Laravel course, strengthening my backend and API skills.
+        </p>
+
+        <img src="images/profile.jpg" alt="Profile photo of Samip Rawal">
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill-box">PHP & Laravel</div>
+            <div class="skill-box">MySQL</div>
+            <div class="skill-box">JavaScript (Basic)</div>
+            <div class="skill-box">Git & GitHub</div>
+            <div class="skill-box">HTML & CSS</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <article>
+            <h3>Used Car Selling and Management System</h3>
+            <p>
+              Developed a web-based used car management system with a responsive, user-friendly interface. 
+              Implemented the backend using PHP, handling data management, listings, and search functionality. 
+              Enhanced the user experience with easy navigation dynamic search filters, and clean architecture, 
+              demonstrating practical skills in full stack web development. 
+            </p>
+        </article>
+
+        <article>
+            <h3>Villa Recommendation System</h3>
+            <p>
+               Developed a web-based Villa Recommendation System that delivers personalized villa suggestions tailored to user preferences.
+               Implemented the Cosine Similarity algorithm to analyze and compare villa features, calculating similarity scores to rank and display 
+               the most relevant results dynamically. This approach significantly enhances search efficiency and accuracy compared to manual browsing.
+               The system is built using PHP, MySQL, HTML, and CSS, featuring a responsive and user-friendly interface.
+            </p>
+        </article>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 Samip Rawal Portfolio</p>
+</footer>
+
+</body>
+</html>

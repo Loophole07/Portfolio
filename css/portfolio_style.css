@@ -1,0 +1,138 @@
+/* ===== Basic Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Base Styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 0 10px;
+}
+
+/* ===== Header & Footer ===== */
+header,
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f4f4f4;
+}
+
+/* ===== Navigation ===== */
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  color: #007BFF;
+}
+
+/* ===== Sections ===== */
+section {
+  margin: 30px 0;
+}
+
+/* ===== Headings ===== */
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-top: 15px;
+  color: #333;
+}
+
+/* ===== Text ===== */
+p {
+  color: #555;
+}
+
+/* ===== Image ===== */
+img {
+  max-width: 150px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+/* ===== Skills Blocks ===== */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill-box {
+  background-color: #f4f4f4;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ===== Forms ===== */
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* ===== Header Divider Line ===== */
+.header-line {
+  width: 80%;
+  margin: 10px auto;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+
+/* ===== Responsive (Mobile First) ===== */
+@media (max-width: 500px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 0 50px;
+  }
+
+  nav a {
+    margin: 0 20px;
+  }
+
+  section {
+    margin: 50px 0;
+  }
+}
+
