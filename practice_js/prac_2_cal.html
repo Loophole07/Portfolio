@@ -1,0 +1,32 @@
+
+<form name="calculator">
+Enter first number :<input type="number" name="first">
+<br>
+Enter second number :<input type="number" name="second">
+
+<br>
+<input type="button" value="Multiply" onclick="mul()">
+<input type="button" value="Divide" onclick="div()">
+</form>
+<script>
+ 
+   
+ function mul(){
+var a = document.calculator.first.value;
+var b = document.calculator.second.value;
+    var c = a*b;
+document.write("The result is "+c);
+
+
+ }
+ function div(){
+var a = document.calculator.first.value;
+var b = document.calculator.second.value;
+    var c = a/b;
+document.write("The result is "+c );
+
+
+ }
+
+
+</script>

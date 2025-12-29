@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "I am creating a demo Portfolio website \r <br>\r Also This is the first day I created the repo",
+  "main": "Js_fundamentals.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loophole07/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Loophole07/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Loophole07/Portfolio#readme",
+  "devDependencies": {
+    "mocha": "^11.7.5"
+  }
+}
