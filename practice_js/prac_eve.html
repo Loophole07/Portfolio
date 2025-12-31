@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*********************************
+ Mouse events
+**********************************/
+let box = document.getElementById("box");
+
+box.addEventListener("click", () => {
+  console.log("Box clicked");
+});
+
+box.addEventListener("mousedown", () => {
+  console.log("Mouse down");
+});
+
+box.addEventListener("mouseup", () => {
+  console.log("Mouse up");
+});
+
+
+
+/*********************************
+ Mouse movement
+**********************************/
+box.addEventListener("mouseover", () => {
+  console.log("Mouse over box");
+});
+
+box.addEventListener("mouseout", () => {
+  console.log("Mouse out box");
+});
+
+box.addEventListener("mouseenter", () => {
+  console.log("Mouse entered box");
+});
+
+box.addEventListener("mouseleave", () => {
+  console.log("Mouse left box");
+});
+
+
+
+/*********************************
+ Drag and Drop (simple)
+**********************************/
+let dragging = false;
+
+box.addEventListener("mousedown", () => dragging = true);
+document.addEventListener("mouseup", () => dragging = false);
+
+document.addEventListener("mousemove", (e) => {
+  if (dragging) {
+    box.style.left = e.pageX + "px";
+    box.style.top = e.pageY + "px";
+    box.style.position = "absolute";
+  }
+});
+
+
+
+/*********************************
+ Pointer events
+**********************************/
+box.addEventListener("pointerdown", () => {
+  console.log("Pointer down (mouse/touch/pen)");
+});
+
+box.addEventListener("pointerup", () => {
+  console.log("Pointer up");
+});
+
+
+
+/*********************************
+ Keyboard events
+**********************************/
+document.addEventListener("keydown", (e) => {
+  console.log("Key down:", e.key);
+});
+
+document.addEventListener("keyup", (e) => {
+  console.log("Key up:", e.key);
+});
+
+
+
+/*********************************
+ Scrolling
+**********************************/
+window.addEventListener("scroll", () => {
+  console.log("Page is scrolling");
+});
+     </script>
+</body>
+</html>
+

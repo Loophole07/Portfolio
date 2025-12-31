@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+class AgeError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "AgeError";
+  }
+}
+
+function enterClub(age) {
+  if (age < 18) {
+    throw new AgeError("Too young to enter");
+  }
+  console.log("Welcome to the club");
+}
+
+try {
+  enterClub(16);
+} catch (e) {
+  console.log(e.name);    // AgeError
+  console.log(e.message); // Too young to enter
+}
+
+    </script>
+</body>
+</html>

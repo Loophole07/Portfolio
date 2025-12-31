@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/***********************
+  1. Class basic syntax
+************************/
+class Human {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(this.name + " is speaking");
+  }
+}
+
+let h1 = new Human("Samip");
+h1.speak();
+
+
+
+/***********************
+  2. Class inheritance
+************************/
+class Student extends Human {
+  study() {
+    console.log(this.name + " is studying");
+  }
+}
+
+let s1 = new Student("Aman");
+s1.speak();
+s1.study();
+
+
+
+/********************************
+  3. Static properties & methods
+*********************************/
+class Person {
+  static species = "Human";
+
+  static info() {
+    console.log("All persons are humans");
+  }
+}
+
+console.log(Person.species);
+Person.info();
+
+
+
+/****************************************
+  4. Private & protected properties
+*****************************************/
+class Account {
+  #balance = 0;        // private
+  _type = "Savings";   // protected (by convention)
+
+  deposit(amount) {
+    this.#balance += amount;
+    console.log("Balance:", this.#balance);
+  }
+}
+
+let acc = new Account();
+acc.deposit(1000);
+// acc.#balance ❌ not allowed
+
+
+
+/*********************************
+  5. Extending built-in classes
+**********************************/
+class MyArray extends Array {
+  sum() {
+    return this.reduce((a, b) => a + b, 0);
+  }
+}
+
+let numbers = new MyArray(1, 2, 3);
+console.log(numbers.sum()); // 6
+
+
+
+/*********************************
+  6. Class checking: instanceof
+**********************************/
+console.log(s1 instanceof Student); // true
+console.log(s1 instanceof Human);   // true
+console.log(s1 instanceof Person);  // false
+
+
+
+/***********************
+  7. Mixins
+************************/
+let walking = {
+  walk() {
+    console.log(this.name + " is walking");
+  }
+};
+
+let eating = {
+  eat() {
+    console.log(this.name + " is eating");
+  }
+};
+
+class Worker extends Human {}
+
+Object.assign(Worker.prototype, walking, eating);
+
+let w1 = new Worker("Ravi");
+w1.walk();
+w1.eat();
+
+
+    </script>
+</body>
+</html>

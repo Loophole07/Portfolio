@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*********************************
+ Browser environment, specs
+**********************************/
+console.log(window);    // browser window
+console.log(document); // webpage document
+
+
+
+/*********************************
+ DOM Tree
+**********************************/
+// HTML is like a family tree
+// html → body → div → p
+console.log(document.body);
+
+
+
+/*********************************
+ Walking the DOM
+**********************************/
+let body = document.body;
+console.log(body.parentElement);   // <html>
+console.log(body.children);        // children of body
+
+
+
+/*********************************
+ Searching elements
+**********************************/
+let byId = document.getElementById("box");
+let byClass = document.getElementsByClassName("item");
+let byQuery = document.querySelector(".item");
+let allQuery = document.querySelectorAll(".item");
+
+
+
+/*********************************
+ Node properties
+**********************************/
+let p = document.querySelector("p");
+console.log(p.nodeType);      // 1 = element
+console.log(p.tagName);       // P
+console.log(p.textContent);   // text inside
+
+
+
+/*********************************
+ Attributes vs Properties
+**********************************/
+let link = document.querySelector("a");
+
+console.log(link.getAttribute("href")); // attribute
+link.href = "https://google.com";        // property
+
+
+
+/*********************************
+ Modifying the document
+**********************************/
+let div = document.createElement("div");
+div.textContent = "Hello Human!";
+document.body.append(div);
+
+
+
+/*********************************
+ Styles and classes
+**********************************/
+div.style.color = "blue";
+div.style.fontSize = "20px";
+div.classList.add("active");
+
+
+
+/*********************************
+ Element size and scrolling
+**********************************/
+console.log(div.offsetWidth);   // element width
+console.log(div.offsetHeight);  // element height
+console.log(div.scrollHeight);  // scrollable height
+
+
+
+/*********************************
+ Window sizes and scrolling
+**********************************/
+console.log(window.innerWidth);   // viewport width
+console.log(window.innerHeight);  // viewport height
+
+window.scrollTo(0, 100); // scroll page down
+
+
+
+/*********************************
+ Coordinates
+**********************************/
+let rect = div.getBoundingClientRect();
+console.log(rect.top);   // distance from top
+console.log(rect.left);  // distance from left
+
+    </script>
+</body>
+</html>
