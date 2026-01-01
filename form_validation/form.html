@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Form Validation Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>User Registration</h2>
+
+  <form id="userForm" novalidate>
+
+    <label>
+      Username:
+      <input type="text" id="username" />
+      <small class="error" id="usernameError"></small>
+    </label>
+
+    <label>
+      Password:
+      <input type="password" id="password" />
+      <small class="error" id="passwordError"></small>
+    </label>
+
+    <label>
+      Confirm Password:
+      <input type="password" id="confirmPassword" />
+      <small class="error" id="confirmPasswordError"></small>
+    </label>
+
+    <label>
+      Email:
+      <input type="email" id="email" />
+      <small class="error" id="emailError"></small>
+    </label>
+
+    <label>
+      Address:
+      <input type="text" id="address" />
+      <small class="error" id="addressError"></small>
+    </label>
+
+    <label>
+      Number:
+      <input type="text" id="number" />
+      <small class="error" id="numberError"></small>
+    </label>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- compiled JS -->
+  <script src="validation_script.js"></script>
+</body>
+</html>
