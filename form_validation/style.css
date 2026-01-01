@@ -110,7 +110,9 @@ input.error-input {
 
 /* Submit button */
 button {
-  width: 100%;
+  grid-column: 1 / -1;          /* span both columns */
+  justify-self: center;         /* center horizontally */
+  width: 60%;                   /* control button width */
   padding: 12px;
   margin-top: 14px;
   font-size: 15px;
@@ -123,6 +125,7 @@ button {
   letter-spacing: 0.5px;
   transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
 }
+
 
 button:hover {
   background: linear-gradient(90deg, #357abd, #1d4ed8);
